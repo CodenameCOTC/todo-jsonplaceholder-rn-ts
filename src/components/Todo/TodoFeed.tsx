@@ -6,19 +6,18 @@ import TodoModel from "../../model/todo-model";
 
 interface P {
   todos: TodoModel[];
+  handleOnScrollEnd(): void;
 }
 
 class TodoFeed extends React.Component<P> {
-
-  _renderItem = (item: TodoModel): JSX.Element => <RenderTodo todo={item} />
-  
   render() {
-    const todos: TodoModel[] = this.props.todos;
+    const { todos, handleOnScrollEnd } = this.props;
     return (
       <FlatList
         data={todos}
-        renderItem={({ item }: { item: TodoModel }) => this._renderItem(item)}
+        renderItem={({ item }) => <RenderTodo todo={item} />}
         keyExtractor={item => item.id.toString()}
+        onEndReached={handleOnScrollEnd}
       />
     );
   }
