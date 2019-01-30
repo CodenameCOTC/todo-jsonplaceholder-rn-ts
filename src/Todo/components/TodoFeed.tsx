@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList } from "react-native";
 
 import RenderTodo from "./RenderTodo";
-import TodoModel from "../../model/todo-model";
+import TodoModel from "../model/todo-model";
 
 interface P {
   todos: TodoModel[];

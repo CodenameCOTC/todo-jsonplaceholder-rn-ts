@@ -2,8 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import {colorGreen, colorRed} from "../../constant/colors"
-import TodoModel from "../../model/todo-model";
+import {colorGreen, colorRed} from "../../constant/colors/"
+import TodoModel from "../model/todo-model";
 
 interface P {
   todo: TodoModel;

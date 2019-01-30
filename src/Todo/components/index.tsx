@@ -3,8 +3,8 @@ import { View } from "react-native";
 import axios from "axios";
 
 import TodoFeed from "./TodoFeed";
-import TodoModel from "../../model/todo-model";
-import { baseURL } from "../../constant/";
+import TodoModel from "../model/todo-model";
+import { baseURL } from "../../constant/index";
 
 interface P {}
 interface S {
